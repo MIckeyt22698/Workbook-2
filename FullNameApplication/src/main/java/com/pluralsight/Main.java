@@ -23,9 +23,35 @@ public class Main {
 
         StringBuilder fullName = new StringBuilder();
 
+        fullName.append(first).append(" ");
+
+
+
         if (middle.isEmpty()){
-            fullName.
+            fullName.append(middle).append("");
         }
+        else {fullName.append(middle).append(" ");}
+
+
+        fullName.append(last).append("");
+
+        if (!suffix.isEmpty() ){
+            fullName.append(", ").append(suffix);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        System.out.println("Full Name: " + fullName);
 
 
 
