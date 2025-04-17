@@ -25,16 +25,46 @@ public class Main {
 
         StringBuilder billingAddress = new StringBuilder();
 
-        System.out.println("Full name: " + fullName);
-
         billingAddress.append(billingStreet).append("\n");
         billingAddress.append(billingCity).append(", ");
         billingAddress.append(billingState).append(" ");
         billingAddress.append(billingZip);
 
-        String shippingHome = billingAddress.toString();
-        System.out.println(shippingHome);
+        System.out.println("Is your billing adress the same as your shipping address? (y/n): ");
+        String sameAddress = keystrokes.nextLine().trim();
+
+
+        if (sameAddress.equals("n")){
+
+        System.out.println("Shipping Street :");
+        String shippingStreet = keystrokes.nextLine().trim();
+
+        System.out.println("Shipping City? :");
+        String shippingCity = keystrokes.nextLine().trim();
+
+        System.out.println("Shipping State? :");
+        String shippingState = keystrokes.nextLine().trim();
+
+        System.out.print("Shipping Zip: ");
+        String shippingZip = keystrokes.nextLine().trim();
+
+        StringBuilder shippingAddress = new StringBuilder();
+
+            shippingAddress.append(shippingStreet).append("\n");
+            shippingAddress.append(shippingCity).append(", ");
+            shippingAddress.append(shippingState).append(" ");
+            shippingAddress.append(shippingZip);
+
+            System.out.println("\nShipping Address:");
+            System.out.println(shippingAddress);;
+
+        }
+        System.out.println("\nFull name: " + fullName);
+        System.out.println("\nBilling Address:");
+        System.out.println(billingAddress);
         //Stanley was here
 
     }
+
+
 }
